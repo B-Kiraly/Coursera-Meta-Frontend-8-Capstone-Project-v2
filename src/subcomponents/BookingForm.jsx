@@ -19,6 +19,7 @@ export default function BookingForm({availableTimes, timesDispatch, reservationD
             <input
             type="text"
             id="res-name"
+            style={reservationData?.name? {outline: "1px solid green"} : {}}
             value={reservationData?.name}
             onChange={e => {
                 setReservationData({
@@ -30,22 +31,28 @@ export default function BookingForm({availableTimes, timesDispatch, reservationD
 
             <label htmlFor="res-date">Choose date</label>
             <input
+            required
             type="date"
             id="res-date"
-            value={reservationData?.date?.toISOString().split("T")[0]}
+            style={reservationData?.date? {outline: "1px solid green"} : {}}
+            value={reservationData?.date? reservationData.date.toISOString().split("T")[0] : ""}
             onChange={e => {
-                let dateObj = new Date(e.target.value)
-                setReservationData({
-                    ...reservationData,
-                    date: dateObj
-                })
+                if (e.target.value) {
+                    let dateObj = new Date(e.target.value)
+                    console.log(e.target.value)
+                    setReservationData({
+                        ...reservationData,
+                        date: dateObj
+                    })
+                }
             }}
             />
 
             <label htmlFor="res-time">Choose time</label>
             <select
             id="res-time"
-            value={reservationData?.time}
+            value={reservationData?.time? reservationData.time : ""}
+            style={reservationData.time? {outline: "1px solid green"} : {}}
             onChange={e => {
                 setReservationData({
                     ...reservationData,
@@ -65,6 +72,7 @@ export default function BookingForm({availableTimes, timesDispatch, reservationD
             min="1"
             max="10"
             id="guests"
+            style={reservationData?.numGuests? {outline: "1px solid green"} : {}}
             value={reservationData?.numGuests}
             onChange={e => {
                 setReservationData({
@@ -77,6 +85,7 @@ export default function BookingForm({availableTimes, timesDispatch, reservationD
             <label htmlFor="occasion">Occasion</label>
             <select
             id="occasion"
+            style={reservationData?.date? {outline: "1px solid green"} : {}}
             value={reservationData?.occasion}
             onChange={e => {
                 setReservationData({
@@ -85,6 +94,7 @@ export default function BookingForm({availableTimes, timesDispatch, reservationD
                 })
             }}
             >
+                <option>None</option>
                 <option>Birthday</option>
                 <option>Anniversary</option>
                 <option>Engagement</option>
@@ -97,6 +107,9 @@ export default function BookingForm({availableTimes, timesDispatch, reservationD
             onClick={e => {
                 e.preventDefault()
                 console.log(reservationData)
+                if (reservationData.name && reservationData.date && reservationData.time && reservationData.numGuests && reservationData.occasion) {
+                    console.log("Submit conditions have been reached")
+                }
             }}
             />
         </form>

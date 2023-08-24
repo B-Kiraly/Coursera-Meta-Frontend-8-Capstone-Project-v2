@@ -43,7 +43,6 @@ export default function Booking() {
             case "updateStatic":
                 return ["15:00", "17:00", "18:00", "20:00", "21:00"]
             case "update":
-                console.log("Accessed reducer update")
                 return fetchAPI(reservationData.date)
             default:
                 return state;

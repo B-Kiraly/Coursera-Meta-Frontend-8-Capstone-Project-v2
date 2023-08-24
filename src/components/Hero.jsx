@@ -1,4 +1,4 @@
-import React from 'react'
+import { Link } from "react-router-dom"
 
 export default function Hero() {
   return (
@@ -13,7 +13,13 @@ export default function Hero() {
                 <p className="text-blurb">
                     We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
                 </p>
-                <button className="button--standard hero-button">Reserve a Table</button>
+                <Link
+                to={"/reserve"}
+                role="button"
+                className="button--standard hero-button"
+                >
+                    Reserve a Table
+                </Link>
             </div>
             <div className="hero-image-container">
                 <img

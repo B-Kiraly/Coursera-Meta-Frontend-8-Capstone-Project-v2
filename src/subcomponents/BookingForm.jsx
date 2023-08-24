@@ -3,10 +3,11 @@ import { useEffect } from "react"
 export default function BookingForm({availableTimes, timesDispatch, reservationData, setReservationData}) {
 
     useEffect(() => {
-        timesDispatch({type: "initialize"})
-    }, [])
+        if (reservationData.date) {
+            timesDispatch({type: "update"})
+        }
 
-    console.log("fml")
+    }, [timesDispatch, reservationData])
 
     return (
         <form
@@ -31,11 +32,12 @@ export default function BookingForm({availableTimes, timesDispatch, reservationD
             <input
             type="date"
             id="res-date"
-            value={reservationData?.date}
+            value={reservationData?.date?.toISOString().split("T")[0]}
             onChange={e => {
+                let dateObj = new Date(e.target.value)
                 setReservationData({
                     ...reservationData,
-                    date: e.target.value
+                    date: dateObj
                 })
             }}
             />

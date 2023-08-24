@@ -55,7 +55,6 @@ export default function Booking() {
 
     return (
         <main className="booking">
-            <h1 className="section-header" onClick={() => timesReducer("hey", "now")}>Reserve a Table</h1>
             <BookingForm
             reservationData={reservationData}
             setReservationData={setReservationData}

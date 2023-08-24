@@ -1,9 +1,11 @@
 import { useState, useReducer } from "react"
 import BookingForm from "../subcomponents/BookingForm"
+import About from "../components/About";
 
 export default function Booking() {
 
     const [reservationData, setReservationData] = useState({
+        id: Math.ceil(Math.random() * 1000000),
         name: "",
         date: new Date(),
         time: "",
@@ -60,6 +62,7 @@ export default function Booking() {
             availableTimes={availableTimes}
             timesDispatch={timesDispatch}
             />
+            <About />
         </main>
     )
 }

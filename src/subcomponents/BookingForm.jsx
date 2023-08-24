@@ -1,6 +1,9 @@
 import { useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 
 export default function BookingForm({availableTimes, timesDispatch, reservationData, setReservationData}) {
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         if (reservationData.date) {
@@ -109,6 +112,7 @@ export default function BookingForm({availableTimes, timesDispatch, reservationD
                 console.log(reservationData)
                 if (reservationData.name && reservationData.date && reservationData.time && reservationData.numGuests && reservationData.occasion) {
                     console.log("Submit conditions have been reached")
+                    navigate("/confirmation", {state: reservationData})
                 }
             }}
             />

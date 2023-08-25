@@ -20,6 +20,7 @@ export default function BookingForm({availableTimes, timesDispatch, reservationD
 
             <label htmlFor="res-name">Reservation Name</label>
             <input
+            required
             type="text"
             id="res-name"
             style={reservationData?.name? {outline: "3px solid lightgreen"} : {}}
@@ -54,6 +55,7 @@ export default function BookingForm({availableTimes, timesDispatch, reservationD
 
             <label htmlFor="res-time">Choose time</label>
             <select
+            required
             id="res-time"
             value={reservationData?.time? reservationData.time : ""}
             style={reservationData?.time? {outline: "3px solid lightgreen"} : {}}
@@ -71,6 +73,7 @@ export default function BookingForm({availableTimes, timesDispatch, reservationD
 
             <label htmlFor="guests">Number of guests</label>
             <input
+            required
             type="number"
             placeholder="1"
             min="1"
@@ -88,6 +91,7 @@ export default function BookingForm({availableTimes, timesDispatch, reservationD
 
             <label htmlFor="occasion">Occasion</label>
             <select
+            required
             id="occasion"
             style={reservationData?.date? {outline: "3px solid lightgreen"} : {}}
             value={reservationData?.occasion}

@@ -45,7 +45,8 @@ export default function BookingForm({availableTimes, timesDispatch, reservationD
                     console.log(e.target.value)
                     setReservationData({
                         ...reservationData,
-                        date: dateObj
+                        date: dateObj,
+                        time: ""
                     })
                 }
             }}
@@ -55,7 +56,7 @@ export default function BookingForm({availableTimes, timesDispatch, reservationD
             <select
             id="res-time"
             value={reservationData?.time? reservationData.time : ""}
-            style={reservationData.time? {outline: "3px solid lightgreen"} : {}}
+            style={reservationData?.time? {outline: "3px solid lightgreen"} : {}}
             onChange={e => {
                 setReservationData({
                     ...reservationData,
@@ -108,7 +109,8 @@ export default function BookingForm({availableTimes, timesDispatch, reservationD
             type="submit"
             value="Make Your reservation"
             className="button--standard"
-            disabled={!reservationData.name && reservationData.date && reservationData.time && reservationData.numGuests && reservationData.occasion}
+            aria-label="submit-button"
+            disabled={!reservationData.name || !reservationData.date || !reservationData.time || !reservationData.numGuests || !reservationData.occasion}
             onClick={e => {
                 e.preventDefault()
                 console.log(reservationData)

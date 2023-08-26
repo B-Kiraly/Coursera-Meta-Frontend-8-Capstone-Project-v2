@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Header() {
   return (
-    <header>
+    <header className='site__header'>
         <a href="/" className="logo__link">
             <img
             src="/assets/Logo.svg"

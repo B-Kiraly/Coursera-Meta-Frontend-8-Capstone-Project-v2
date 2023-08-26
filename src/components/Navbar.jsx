@@ -2,7 +2,7 @@ import Header from "../subcomponents/Header"
 
 export default function Navbar() {
   return (
-    <div className="container main-grid">
+    <div className="container topbar">
         <Header />
         <nav className='nav'>
             <ul className='nav__list'>
@@ -21,6 +21,8 @@ export default function Navbar() {
                         Menu
                     </a>
                 </li>
+            </ul>
+            <ul className="nav__list">
                 <li className='nav__item'>
                     <a href='/reserve' className='nav__link'>
                         Reservations

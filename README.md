@@ -1,6 +1,8 @@
-# Todo
+# Overview (please read)
 
-Disable scroll while hovering over the range in the booking form?
+This is my completed capstone project for the Meta Frontend Development course #8 on Coursera. 
+
+As the provided API for this project is semmingly not working properly, I have substituted code that accomplishes similar manipulations on the available times data in the reservation form. If I find a better solution over the course of peer evaluation, I'll probably go back and implement it. In the meantime, this solution works quite well to simulate the same effect. 
 
 # Getting Started with Create React App
 

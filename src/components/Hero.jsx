@@ -7,8 +7,8 @@ export default function Hero() {
         <div className="container hero-container">
             <div className="hero-content">
                 <div className="title-bundle">
-                    <h1 className='section-header hero-header'>Little Lemon</h1>
-                    <h2 className='section-subheader hero-subheader'>Chicago</h2>
+                    <h1 className='section-header hero__header'>Little Lemon</h1>
+                    <h2 className='section-subheader hero__subheader'>Chicago</h2>
                 </div>
                 <p className="hero__text text__karla">
                     We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
@@ -16,7 +16,7 @@ export default function Hero() {
                 <Link
                 to={"/reserve"}
                 role="button"
-                className="button--standard hero-button"
+                className="button--standard hero__button"
                 >
                     Reserve a Table
                 </Link>

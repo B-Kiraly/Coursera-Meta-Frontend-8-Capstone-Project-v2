@@ -91,7 +91,7 @@ header, nav {
 }
 
 .text-card-title {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 800;
 }
 
@@ -198,11 +198,16 @@ header, nav {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  padding: 6rem 0;
+  padding: 4.25rem 0;
 }
 
-.hero-header {
+.hero__header {
+  font-size: 6rem;
   color: var(--primary-yellow);
+}
+
+.hero__subheader {
+  font-size: 3.75rem;
 }
 
 .hero .section-subheader, .hero .hero__text {
@@ -211,8 +216,9 @@ header, nav {
 }
 
 .hero__text {
+  font-size: 1.25rem;
   width: 100%;
-  max-width: 50%;
+  max-width: 60%;
   align-self: left;
   justify-self: left;
 }
@@ -232,8 +238,9 @@ header, nav {
   border-radius: 1rem;
 }
 
-.hero-button {
+.hero__button {
   font-size: 1.25rem;
+  letter-spacing: 0.07rem;
   align-self: start;
   justify-self: left;
   text-decoration: none;
@@ -370,6 +377,7 @@ header, nav {
 }
 
 .testimonial__username {
+  font-size: 1.25rem;
   font-weight: bolder;
   align-self: center;
   width: 4rem;
@@ -536,7 +544,7 @@ form > input, form > select {
     align-items: center;
   }
 
-  .hero-button {
+  .hero__button {
     align-self: center;
   }
 

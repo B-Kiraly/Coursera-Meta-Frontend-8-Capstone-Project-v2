@@ -54,8 +54,8 @@ export default function Specials() {
                             <p className='text-price'>{special.price}</p>
                         </div>
 
-                        <p className="text-paragraph specials__paragraph">
-                        {special.description}
+                        <p className="specials__paragraph text__karla">
+                          {special.description}
                         </p>
                         <div className="specials__delivery">
                         <p>Order a delivery</p>

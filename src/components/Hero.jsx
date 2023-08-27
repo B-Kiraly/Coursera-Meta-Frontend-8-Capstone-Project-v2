@@ -10,7 +10,7 @@ export default function Hero() {
                     <h1 className='section-header hero-header'>Little Lemon</h1>
                     <h2 className='section-subheader hero-subheader'>Chicago</h2>
                 </div>
-                <p className="text-blurb">
+                <p className="hero__text text__karla">
                     We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
                 </p>
                 <Link

@@ -34,7 +34,7 @@ export default function Testimonials() {
   return (
     <section className='testimonials'>
         <div className="container testimonials__container">
-            <h1 style={{textAlign: "center"}}>
+            <h1 style={{textAlign: "center"}} className="section-header">
                 Testimonials
             </h1>
             <div className="testimonials__cards-container">
@@ -58,7 +58,7 @@ export default function Testimonials() {
                                 />
                                 <p className="testimonial__username">{user.name}</p>
                             </div>
-                            <p className='testimonial__review'>{user.reviewText}</p>
+                            <p className='testimonial__review text__karla'>{user.reviewText}</p>
                         </div>
                     )
                 })}

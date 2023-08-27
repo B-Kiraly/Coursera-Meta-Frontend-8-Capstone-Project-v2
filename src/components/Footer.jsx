@@ -18,15 +18,15 @@ export default function Footer() {
             </div>
             <div className="footer__column">
               <p className="footer__header">Contact</p>
-              <a href='/' className="footer__link">Address</a>
-              <a href='/' className="footer__link">Phone Number</a>
-              <a href='/' className="footer__link">Email</a>
+              <a href='/' className="footer__link">123 Lemon Lane</a>
+              <a href='/' className="footer__link">0 123 456 789</a>
+              <a href='/' className="footer__link">little.lemon@gmail.com</a>
             </div>
             <div className="footer__column">
               <p className="footer__header">Social Media Links</p>
-              <a href='/' className="footer__link">Address</a>
-              <a href='/' className="footer__link">Phone Number</a>
-              <a href='/' className="footer__link">Email</a>
+              <a href='/' className="footer__link">Facebook</a>
+              <a href='/' className="footer__link">Instagram</a>
+              <a href='/' className="footer__link">Pinterest</a>
             </div>
         </div>
     </footer>

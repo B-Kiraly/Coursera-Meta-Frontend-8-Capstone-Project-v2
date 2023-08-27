@@ -7,7 +7,7 @@ export default function About() {
                     <h1 className="section-header">Little Lemon</h1>
                     <h2 className="section-subheader">Chicago</h2>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, excepturi! Libero cum voluptates quia odio in, assumenda facilis suscipit aspernatur. Quae exercitationem magnam, fugit quas maiores asperiores perferendis fugiat, nam, officia unde quod! Quaerat consequuntur eaque obcaecati impedit laboriosam sint?</p>
+                <p className="about__paragraph text__karla">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, excepturi! Libero cum voluptates quia odio in, assumenda facilis suscipit aspernatur. Quae exercitationem magnam, fugit quas maiores asperiores perferendis fugiat, nam, officia unde quod! Quaerat consequuntur eaque obcaecati impedit laboriosam sint?</p>
             </div>
 
             <div className="about__images">
@@ -17,7 +17,7 @@ export default function About() {
                 className="about__image about__image__left"
                 />
                 <img
-                src="/assets/Chefs1.jpg"
+                src="/assets/greek_salad.jpg"
                 alt="right/background"
                 className="about__image about__image__right"
                 />

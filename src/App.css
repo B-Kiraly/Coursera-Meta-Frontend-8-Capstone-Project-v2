@@ -717,7 +717,11 @@ form > h1 {
 
   .nav__list {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.6rem;
+  }
+
+  .nav__link {
+    font-size: 1.5rem;
   }
 
   .title-bundle {

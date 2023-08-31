@@ -515,14 +515,38 @@ form > input, form > select {
 }
 
 .confirmation {
-  background-color: var(--secondary-peach);
+  background-image: url("/public/assets/food3.jpeg");
   width: 100%;
   padding: 4rem 0;
+}
+
+.confirmation__container {
+  padding: 1.5rem 0;
+  width: 70%;
+  background-color: var(--primary-yellow);
+  outline: 2px solid black;
+  border-radius: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem 0;
+  text-align: center;
+}
+
+.confirmation__container > * {
+  width: 80%;
+}
+
+.confirmation__field {
+  font-size: clamp(1.4rem, 2vw, 2.3rem);
+  font-weight: 500;
+}
+
+.confirmation__data {
+  font-weight: 700;
+  font-style: normal;
+  padding-left: 0.4rem;
 }
 
 /* Media Query */

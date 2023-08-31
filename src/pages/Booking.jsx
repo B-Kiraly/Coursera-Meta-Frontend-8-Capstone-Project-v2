@@ -1,6 +1,7 @@
 import { useState, useReducer } from "react"
 import BookingForm from "../subcomponents/BookingForm"
 import About from "../components/About";
+import { fetchAPI } from "../utils/reservationAPI";
 
 export default function Booking() {
 
@@ -12,27 +13,6 @@ export default function Booking() {
         numGuests: 0,
         occasion: ""
     })
-
-    // following two functions allegedly correspond to the broken api's code
-    const seededRandom = seed => {
-        const m = 2 ** 35 - 31;
-        const a = 185852;
-        let s = seed % m;
-        return () => (s = s * a % m) / m;};
-
-    const fetchAPI = date => {
-        let result = [];
-        let random = seededRandom(date.getDate());
-
-        for(let i = 17; i <= 23; i++) {
-            if (random() < 0.5) result.push(i + ':00');
-            if(random() < 0.5) result.push(i + ':30');
-        }
-
-        return result;
-        };
-
-    // ------------------------------------------------------------------
 
     const initializeTimes = () => {
         return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"]

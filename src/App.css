@@ -330,7 +330,7 @@ header, nav {
   gap: 3rem;
 }
 
-.testimonials__cards-container {
+.testimonials__cards {
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -351,41 +351,44 @@ header, nav {
   margin: 0 auto;
 }
 
-.testimonial__rating {
+.testimonials__rating {
   display: flex;
   justify-content: center;
 }
 
-.testimonial__rating > p {
+.testimonials__rating > p {
   font-size: 1.25rem;
   font-weight: bolder;
   align-self: center;
 }
 
-.testimonial__star-icon {
+.testimonials__star-icon {
   height: 2rem;
 }
 
-.testimonial__profile {
+.testimonials__profile {
   display: flex;
   justify-content: space-around;
 }
 
-.testimonials__image {
+.testimonials__profile__image {
   height: 8rem;
   outline: 1px solid var(--secondary-peach);
   border-radius: 5rem;
 }
 
-.testimonial__username {
+.testimonials__profile__username {
   font-size: 1.25rem;
   font-weight: bolder;
   align-self: center;
   width: 4rem;
 }
 
-.testimonial__review {
-  text-align: center;
+.testimonials__review {
+  border-radius: 0.5rem;
+  outline: 1px solid var(--secondary-peach);
+  padding: 0.4rem 0.5rem;
+  text-align: left;
   max-width: 19rem; /*Max width where they can all fit in one line on a 1080p monitor */
 }
 

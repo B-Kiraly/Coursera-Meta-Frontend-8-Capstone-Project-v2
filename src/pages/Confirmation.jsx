@@ -16,8 +16,7 @@ export default function Confirmation() {
             console.log("Confirmation page not accessible without reservationData object")
             navigate("/")
         }
-    }, [])
-
+    }, [navigate, reservationData])
 
 
     return (
@@ -30,9 +29,5 @@ export default function Confirmation() {
             <h3>Time: {reservationData?.time? reservationData.time : "time error"}</h3>
             <h3>We'll see you then!</h3>
         </main>
-    )
-
-    return (
-        <h1>woooow what a fancy page</h1>
     )
 }

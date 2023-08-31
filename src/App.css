@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-  width: 95%;
+  width: 92%;
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -262,6 +262,7 @@ header, nav {
 .specials__topbar {
   display: flex;
   justify-content: space-between;
+  gap: 2rem;
 }
 
 .specials__items {
@@ -405,14 +406,16 @@ header, nav {
   /* outline: 2px solid hotpink; */
 }
 
-.about__text {
+.about__content {
   display: flex;
   flex-direction: column;
   gap: 4rem;
 }
 
-.about__text > p {
+.about__content__paragraph {
   width: 90%;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
 .about__images {
@@ -426,12 +429,12 @@ header, nav {
   border-radius: 1rem;
 }
 
-.about__image__left {
+.about__image--left {
   top: 6rem;
   z-index: 1;
 }
 
-.about__image__right {
+.about__image--right {
   top: 0rem;
   left: 7rem;
   z-index: 0;
@@ -561,7 +564,7 @@ form > input, form > select {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 2.5rem;
     text-align: center;
   }
 
@@ -569,16 +572,11 @@ form > input, form > select {
     width: 100%;
   }
 
-  .about__text {
-    /* outline: 5px solid green; */
+  .about__content {
     text-align: center;
   }
 
-  /* .about__text > * {
-    outline: 1px solid orange;
-  } */
-
-  .about__text > p {
+  .about__content__paragraph {
     margin: 0 auto;
     width: 75%;
   }
@@ -588,20 +586,20 @@ form > input, form > select {
   }
 
   .about__image {
-    max-width: 22rem;
-    max-height: 14rem;
-    left: 0; 
+    max-width: 26rem;
+    max-height: 16rem;
     right: 0; 
     margin-left: auto; 
     margin-right: auto; 
   }
 
-  .about__image__left {
-    left: 0rem;
+  .about__image--left {
+    left: -8rem;
+    top: 7rem;
   }
 
-  .about__image__right {
-    left: 7rem;
+  .about__image--right {
+    left: 8rem;
   }
 
   .nav {
@@ -623,17 +621,27 @@ form > input, form > select {
 }
 
 @media all and (max-width: 700px) {
+
+  .specials__topbar {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+  
   .specials__items {
     justify-content: center;
     padding: 2rem 0rem;
   }
 
-  .about__text {
+  .about__content {
     width: 80%;
     text-align: center;
+    gap: 2.5rem;
   }
 
-  .about__text > p { 
+  .about__content__paragraph { 
     width: 100%;
   }
 
@@ -643,8 +651,23 @@ form > input, form > select {
 
   .about__image {
     max-height: 100%;
-    max-width: 75%;
+    width: 70%;
+    min-width: 250px;
     position: static;
+  }
+
+  .about__image--left {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .about__image--right {
+    position: relative;
+    left: 0;
+    top: -5rem;
+    z-index: 1;
   }
 }
 
@@ -668,14 +691,6 @@ form > input, form > select {
   /* .nav__list {
     flex-direction: column;
   } */
-
-  .specials__topbar {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
-  }
 
   .footer__column {
     justify-content: center;

@@ -124,7 +124,7 @@ export default function BookingForm({availableTimes, timesDispatch, reservationD
             className="form-input"
             required
             id="occasion"
-            style={reservationData?.date? {outline: "3px solid lightgreen"} : {}}
+            style={reservationData?.occasion? {outline: "3px solid lightgreen"} : {}}
             value={reservationData?.occasion}
             onChange={e => {
                 setReservationData({

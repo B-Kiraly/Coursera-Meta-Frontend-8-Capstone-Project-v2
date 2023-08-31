@@ -8,7 +8,9 @@ As the provided API for this project is semmingly not working properly, I have s
 
 Clamped header and subheader font sizes
 
-Improved aesthetics
+Add checkmark-type image to the reservation confirmation card
+
+Improve aesthetics
 
 # Getting Started with Create React App
 

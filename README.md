@@ -4,6 +4,12 @@ This is my completed capstone project for the Meta Frontend Development course #
 
 As the provided API for this project is semmingly not working properly, I have substituted code that accomplishes similar manipulations on the available times data in the reservation form. If I find a better solution over the course of peer evaluation, I'll probably go back and implement it. In the meantime, this solution works quite well to simulate the same effect. 
 
+## todo
+
+Clamped header and subheader font sizes
+
+Improved aesthetics
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

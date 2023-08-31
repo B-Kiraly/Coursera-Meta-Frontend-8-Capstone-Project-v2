@@ -14,12 +14,18 @@ export default function BookingForm({availableTimes, timesDispatch, reservationD
 
     return (
         <form
-        className="booking__form"
+        className="booking-form"
         >
             <h1 className="section-header">Reserve a Table</h1>
 
-            <label htmlFor="res-name">Reservation Name</label>
+            <label 
+            className="form-label"
+            htmlFor="res-name">
+                Reservation Name 
+            </label>
+
             <input
+            className="form-input"
             required
             type="text"
             id="res-name"
@@ -33,8 +39,14 @@ export default function BookingForm({availableTimes, timesDispatch, reservationD
             }}
             />
 
-            <label htmlFor="res-date">Choose date</label>
+            <label 
+            className="form-label"
+            htmlFor="res-date">
+                Choose date
+            </label>
+
             <input
+            className="form-input"
             required
             type="date"
             id="res-date"
@@ -53,8 +65,14 @@ export default function BookingForm({availableTimes, timesDispatch, reservationD
             }}
             />
 
-            <label htmlFor="res-time">Choose time</label>
+            <label
+            className="form-label"
+            htmlFor="res-time">
+                Choose time
+            </label>
+
             <select
+            className="form-input"
             required
             id="res-time"
             value={reservationData?.time? reservationData.time : ""}
@@ -71,11 +89,17 @@ export default function BookingForm({availableTimes, timesDispatch, reservationD
                 })}
             </select>
 
-            <label htmlFor="guests">Number of guests</label>
+            <label 
+            className="form-label"
+            htmlFor="guests">
+                Number of guests
+            </label>
+
             <input
+            className="form-input"
             required
             type="number"
-            placeholder="1"
+            placeholder="number"
             min="1"
             max="10"
             id="guests"
@@ -89,8 +113,15 @@ export default function BookingForm({availableTimes, timesDispatch, reservationD
             }}
             />
 
-            <label htmlFor="occasion">Occasion</label>
+            <label
+            className="form-label"
+            htmlFor="occasion"
+            >
+                Occasion
+            </label>
+
             <select
+            className="form-input"
             required
             id="occasion"
             style={reservationData?.date? {outline: "3px solid lightgreen"} : {}}
@@ -112,7 +143,7 @@ export default function BookingForm({availableTimes, timesDispatch, reservationD
             <input
             type="submit"
             value="Make Your reservation"
-            className="button--standard"
+            className="button--standard form-button"
             aria-label="submit-button"
             disabled={!reservationData.name || !reservationData.date || !reservationData.time || !reservationData.numGuests || !reservationData.occasion}
             onClick={e => {

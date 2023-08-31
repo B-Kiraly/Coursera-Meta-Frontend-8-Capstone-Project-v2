@@ -486,6 +486,10 @@ header, nav {
 
 /* Booking */
 
+form > h1 {
+  text-align: center;
+}
+
 .booking {
   width: 100%;
   display: flex;
@@ -495,7 +499,7 @@ header, nav {
   gap: 2rem;
 }
 
-.booking__form {
+.booking-form {
   padding: 4rem 0rem;
   background-color: var(--primary-green);
   color: white;
@@ -504,15 +508,26 @@ header, nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
-form > input, form > select {
+.form-label {
+  font-size: 1.5rem;
+}
+
+.form-input {
   font-size: 2rem;
   min-height: 3rem;
-  width: 20rem;
+  width: clamp(12rem, 30vw, 20rem);
   border-radius: 0.3rem;
+  padding-left: 0.4rem;
 }
+
+.form-button {
+  margin-top: 2.5rem;
+}
+
+/* CONFIRMATION PAGE */
 
 .confirmation {
   background-image: url("/public/assets/food3.jpeg");

@@ -1,14 +1,27 @@
-# Overview (please read)
+# Overview
 
-This is my completed capstone project for the Meta Frontend Development course #8 on Coursera. 
+This is my completed capstone project for the Meta Frontend Development course #8 on Coursera (summer 2023). 
 
-As the provided API for this project is semmingly not working properly, I have substituted code that accomplishes similar manipulations on the available times data in the reservation form. If I find a better solution over the course of peer evaluation, I'll probably go back and implement it. In the meantime, this solution works quite well to simulate the same effect. 
+It's a simple setup showcasing a partially constructed website for a fictional restaurant in Chicago named Little Lemon. The webapp is built with React as its framework. 
+
+The project as assigned consists a complete homepage, a table booking form, and a confirmation page. Each is sandwiched between a navigation bar at the top and a footer at the bottom. 
+
+React routing is made of use, and the reservations page can be accessed via multiple links on the homepage (as well as my url).
+As this is only a partially built webapp, all other links are only decorative and do not lead anywhere. 
+
+The project is responsive and should look relatively good at any screen size. Other concepts demonstrated with this project include but are not limited to: (simulated) API usage, displaying dynamic data, creating and running unit tests, proper meta tag usage.
 
 ## todo
 
 Clamped header and subheader font sizes
 
 Add checkmark-type image to the reservation confirmation card
+
+Gradient colors on reservation form? Feedback if the user tries to click the submit button without all the required information filled out?
+
+button to link back to the homepage from the reservation confirmation screen
+
+Add a cart component & context, and allow the user to add the specials on the homepage to it. Add SweetAlert2 for pop-ups that handle the adding process. 
 
 Improve aesthetics
 
@@ -52,33 +65,3 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

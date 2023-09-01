@@ -148,7 +148,6 @@ export default function BookingForm({availableTimes, timesDispatch, reservationD
             disabled={!reservationData.name || !reservationData.date || !reservationData.time || !reservationData.numGuests || !reservationData.occasion}
             onClick={e => {
                 e.preventDefault()
-                console.log(reservationData)
                 if (reservationData.name && reservationData.date && reservationData.time && reservationData.numGuests && reservationData.occasion) {
                     console.log("Submit conditions have been reached")
                     navigate("/confirmation", {state: reservationData})

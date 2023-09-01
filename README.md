@@ -10,8 +10,6 @@ Clamped header and subheader font sizes
 
 Add checkmark-type image to the reservation confirmation card
 
-Larger specials cards? Clamped dimensions?
-
 Improve aesthetics
 
 # Getting Started with Create React App

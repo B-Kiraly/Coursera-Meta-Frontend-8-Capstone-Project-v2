@@ -291,6 +291,7 @@ header, nav {
 .specials__card:hover {
   outline: 2px solid var(--secondary-gray);
   box-shadow: 10px 5px 5px 1px rgb(206, 205, 205);
+  transform: scale(1.02);
 }
 
 .specials__button {
@@ -727,6 +728,10 @@ form > h1 {
 }
 
 @media all and (max-width: 600px) {
+
+  body {
+    --card-width: 19rem;
+  }
 
   .nav__list {
     flex-direction: column;

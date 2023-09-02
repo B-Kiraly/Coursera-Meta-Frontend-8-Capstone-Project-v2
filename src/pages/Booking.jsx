@@ -11,7 +11,7 @@ export default function Booking() {
         date: new Date(),
         time: "",
         numGuests: 0,
-        occasion: ""
+        occasion: "None"
     })
 
     const initializeTimes = () => {

@@ -17,8 +17,8 @@ function App() {
       <Routes>
         <Route index element={<Homepage />} />
         <Route path='/about' element={<><About /><Testimonials /></>} />
-        {['menu', 'order', 'specials'].map((path, index) => <Route key={index} path={path} element={<Specials />} />)}
-        <Route path='/reserve' element={<Booking />} />
+        {['menu', 'orders', 'specials'].map((path, index) => <Route key={index} path={path} element={<Specials />} />)}
+        <Route path='/reservation' element={<Booking />} />
         <Route path='/confirmation' element={<Confirmation />} />
       </Routes>
       <Footer />

@@ -117,7 +117,7 @@ export default function BookingForm({availableTimes, timesDispatch, reservationD
             className="form-label"
             htmlFor="occasion"
             >
-                Occasion
+                Special Occasion
             </label>
 
             <select

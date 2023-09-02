@@ -10,10 +10,10 @@ export default function Footer() {
             <div className="footer__column">
               <p className="footer__header">Doormat Navigation</p>
               <a href='/' className="footer__link">Home</a>
-              <a href='/' className="footer__link">About</a>
-              <a href='/' className="footer__link">Menu</a>
-              <a href='/' className="footer__link">Reservations</a>
-              <a href='/' className="footer__link">Order Online</a>
+              <a href='/about' className="footer__link">About</a>
+              <a href='/menu' className="footer__link">Menu</a>
+              <a href='/reservation' className="footer__link">Reservations</a>
+              <a href='/orders' className="footer__link">Order Online</a>
               <a href='/' className="footer__link">Login</a>
             </div>
             <div className="footer__column">

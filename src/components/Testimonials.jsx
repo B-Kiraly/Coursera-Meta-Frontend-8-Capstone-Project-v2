@@ -35,7 +35,7 @@ export default function Testimonials() {
     <section className='testimonials'>
         <div className="container testimonials__container">
             <h1 style={{textAlign: "center"}} className="section-header">
-                Testimonials
+                User Reviews
             </h1>
             <div className="testimonials__cards">
                 {userData.map(user => {

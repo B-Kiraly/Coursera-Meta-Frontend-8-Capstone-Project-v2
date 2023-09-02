@@ -5,6 +5,9 @@ import Homepage from './pages/Homepage'
 import Booking from './pages/Booking'
 import Confirmation from './pages/Confirmation'
 import { Routes, Route } from 'react-router-dom'
+import About from './components/About'
+import Testimonials from './components/Testimonials'
+import Specials from './components/Specials'
 
 function App() {
 
@@ -13,6 +16,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route index element={<Homepage />} />
+        <Route path='/about' element={<><About /><Testimonials /></>} />
+        {['menu', 'order', 'specials'].map((path, index) => <Route key={index} path={path} element={<Specials />} />)}
         <Route path='/reserve' element={<Booking />} />
         <Route path='/confirmation' element={<Confirmation />} />
       </Routes>

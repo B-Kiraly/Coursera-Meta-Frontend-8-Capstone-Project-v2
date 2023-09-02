@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 
 export default function Navbar() {
 
+    let navLinks = [{text: "Home", path: "/"}, {text: "About", path: "/about"}, {text: "Menu", path: "/menu"}, {text: "Book a Table", path: "/reservation"}, {text: "Order Online", path: "/orders"}, {text: "Login", path: "/login"}]
+
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     useEffect(() => {
@@ -27,42 +29,34 @@ export default function Navbar() {
                 <span className="hamburger"></span>
             </button>
             <nav
+            onClick={() => {
+                console.log(navLinks.slice(0, Math.round(navLinks.length / 2)))
+                console.log(navLinks.slice(Math.round(navLinks.length / 2)))
+            }}
             className='nav'
             style={windowWidth <= 600? displayNav? {display: "flex"}: {display: "none"}: {display: "flex"}}
             >
                 <ul className='nav__list'>
-                    <li className='nav__item'>
-                        <a href='/' className='nav__link'>
-                            Home
-                        </a>
-                    </li>
-                    <li className='nav__item'>
-                        <a href='/about' className='nav__link'>
-                            About
-                        </a>
-                    </li>
-                    <li className='nav__item'>
-                        <a href='/menu' className='nav__link'>
-                            Menu
-                        </a>
-                    </li>
+                    {navLinks.slice(0, Math.round(navLinks.length / 2)).map(link => {
+                        return (
+                            <li className='nav__item' key={link.path}>
+                                <a href={link.path} className='nav__link'>
+                                    {link.text}
+                                </a>
+                            </li>
+                        )
+                    })}
                 </ul>
                 <ul className="nav__list">
-                    <li className='nav__item'>
-                        <a href='/reserve' className='nav__link'>
-                            Reservations
-                        </a>
-                    </li>
-                    <li className='nav__item'>
-                        <a href='/order' className='nav__link'>
-                            Order Online
-                        </a>
-                    </li>
-                    <li className='nav__item'>
-                        <a href='/login' className='nav__link'>
-                            Login
-                        </a>
-                    </li>
+                    {navLinks.slice(Math.round(navLinks.length / 2)).map(link => {
+                        return (
+                            <li className='nav__item' key={link.path}>
+                                <a href={link.path} className='nav__link'>
+                                    {link.text}
+                                </a>
+                            </li>
+                        )
+                    })}
                 </ul>
             </nav>
         </div>

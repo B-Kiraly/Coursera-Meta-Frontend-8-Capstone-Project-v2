@@ -11,7 +11,7 @@ export default function About() {
                     </h2>
                 </div>
                 <p className="about__content__paragraph text__karla">
-                    Little Lemon opened in 1995 by two passionate young chefs, Adrian and Mario. Despite the city's diverse food culture, they recognized a lack of quality Mediterranean cuisine in Chicago, and were inspired to bring the authentic flavors of southern Italy to the people of Chicago. Nearly twenty years later, Little Lemon remains a fixture in the city's thriving food scene with its two founders still at the helm.
+                    Little Lemon opened in 2005 by two passionate young chefs, Adrian and Mario. Despite the city's diverse food culture, they recognized a lack of quality Mediterranean cuisine in Chicago, and were inspired to bring the authentic flavors of southern Italy to the people of Chicago. Nearly twenty years later, Little Lemon remains a fixture in the city's thriving food scene with its two founders still at the helm.
                 </p>
             </div>
 

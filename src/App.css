@@ -55,6 +55,7 @@ body {
 
 .button--standard:hover {
   text-decoration: underline;
+  outline: 1px solid black;
 }
 
 .button--standard:disabled {
@@ -512,6 +513,7 @@ form > h1 {
 .booking-form {
   padding: 4rem 0rem;
   background-color: var(--primary-green);
+  background: linear-gradient(var(--primary-green) , 30%, rgb(133, 133, 36), 70%, var(--primary-green));
   color: white;
   width: 100%;
   display: flex;
@@ -535,6 +537,10 @@ form > h1 {
 
 .form-button {
   margin-top: 2.5rem;
+}
+
+.form-button:hover:disabled {
+  outline: none;
 }
 
 /* CONFIRMATION PAGE */

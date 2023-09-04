@@ -1,10 +1,11 @@
 import Swal from 'sweetalert2'
 import { useState } from 'react';
 import { specialsData } from '../utils/menuData';
+import { useCart } from '../providers/CartContext';
 
 export default function Specials() {
 
-  const [cart, setCart] = useState([])
+  const {cart, setCart} = useCart()
 
   const [specialsMenu, setSpecialsMenu] = useState(specialsData)
 

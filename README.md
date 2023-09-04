@@ -19,7 +19,7 @@ Add checkmark-type image to the reservation confirmation card
 
 button to link back to the homepage from the reservation confirmation screen
 
-Make a component to display the cart state & convert is from a useState to a context. Show the cumulative price of all orders, and give the user the ability to simulate submitting an order. Added a cart notification number as a before/after css attribute in the navbar.
+Make a component to display the cart context. Show the cumulative price of all orders, and give the user the ability to simulate submitting an order. Added a cart notification number as a before/after css attribute in the navbar.
 
 Improve aesthetics
 

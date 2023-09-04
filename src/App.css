@@ -297,13 +297,18 @@ header, nav {
 .specials__card:hover {
   cursor: pointer;
   border: 0.1px solid var(--secondary-gray);
-  background-color: #dddcdc;
+  /* background-color: #dddcdc; */
   transform: scale(1.03);
 }
 
 .specials__card:active {
-  outline: 0.1px solid var(--secondary-black);
-  background-color: #b8b8b8;
+  outline: 0.1px solid darkgray;
+  background-color: #cac9c9;
+}
+
+#specials__modal {
+  margin-left: auto;
+  /* margin: 0 auto; */
 }
 
 .specials__button {

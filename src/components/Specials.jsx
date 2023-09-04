@@ -1,47 +1,97 @@
-const specialsData = [
-    {
-      id: 1,
-      dish: "Greek Salad",
-      imageSrc: "/assets/greek_salad.jpg",
-      altMessage: "A greek salad",
-      price: 12.99,
-      description: "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons."
-    },
-    {
-      id: 2,
-      dish: "Bruchetta",
-      imageSrc: "/assets/bruchetta.jpg",
-      altMessage: "A close-up of several slices of bruchetta, served on a wooden platter and surrounded and topped by herb garnishes.",
-      price: 5.99,
-      description: "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil."
-    },
-    {
-      id: 3,
-      dish: "Lemon Dessert",
-      imageSrc: "/assets/lemon_dessert.jpg",
-      altMessage: "A yellow cake-like pastry with lemon's visible in the background and a fork visible in the foreground",
-      price: 4.99,
-      description: "This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined."
-    }
-  ]
+import Swal from 'sweetalert2'
+import { useState } from 'react';
+import { specialsData } from '../utils/menuData';
 
 export default function Specials() {
+
+  const [cart, setCart] = useState([])
+
+  const [specialsMenu, setSpecialsMenu] = useState(specialsData)
+
+  const handleOrder = (dish, index) => {
+    console.log(`Menu array id ${index} has been clicked`);
+
+    Swal.fire({
+        title: `Add ${dish.name} to Cart?`,
+        inputLabel: "Choose quantity:",
+        input: "range",
+        inputAttributes: {
+          min: 1,
+          max: 10,
+          step: 1,
+          value: dish.numToAdd,
+          id: "specials__modal",
+        },
+        inputValue: 1,
+        icon: 'info',
+        showCancelButton: true,
+        confirmButtonColor: '#638f2b',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, Order it!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            `Added ${dish.name} x${result.value} to cart!`,
+            'You may change your order in your cart later',
+            'success'
+          )
+          let isAlreadyInCart = false
+          cart.forEach(itemObj => {
+            if (!isAlreadyInCart) {
+              if (itemObj.dish.name === dish.name) {
+                console.log("Dish is already in array")
+                isAlreadyInCart = true
+                setCart(cart.map(itemObj => {
+                  if (itemObj.dish.name === dish.name) {
+                    return {...itemObj, quantity: itemObj.quantity + parseInt(result.value)}
+                  }
+                  else {
+                    return itemObj
+                  }
+                }))
+              }
+            }
+          })
+          if (!isAlreadyInCart) {
+            setCart([...cart, {
+              dish: {...dish},
+              quantity: parseInt(result.value)
+            }])
+            console.log("New cart item added")
+          }
+        }
+      })
+  }
+
   return (
     <section className="specials">
         <div className="container specials__flex">
             <div className="specials__topbar">
-                <h1 className="section-header">
+                <h1 className="section-header" onClick={() => console.log(cart)}>
                     This Week's Specials!
                 </h1>
-                <button className="button--standard specials__button">Online Menu</button>
+                <button 
+                className="button--standard specials__button"
+                onClick={() => setSpecialsMenu(specialsMenu.map(dish => {
+                  if (dish.id === 2) {
+                    return {...dish, dish: "Barry Bergman"}
+                  }
+                  else {
+                    return dish
+                  }
+                }))}
+                >
+                  Online Menu
+                </button>
             </div>
             <div className="specials__items">
 
-                {specialsData.map(special => {
+                {specialsMenu.map((special, index) => {
                 return (
                     <div
                     className="specials__card"
-                    key={special.id}
+                    key={index}
+                    onClick={() => handleOrder(special, index)}
                     >
                     <img
                     src={special.imageSrc}
@@ -50,7 +100,7 @@ export default function Specials() {
                     />
                     <div className="container--tight">
                         <div className='specials__item__heading'>
-                            <p className='text-card-title'>{special.dish}</p>
+                            <p className='text-card-title'>{special.name}{special.numToAdd}</p>
                             <p className='text-price'>{special.price}</p>
                         </div>
 
@@ -71,7 +121,6 @@ export default function Specials() {
                 })}
             </div>
         </div>
-
     </section>
   )
 }

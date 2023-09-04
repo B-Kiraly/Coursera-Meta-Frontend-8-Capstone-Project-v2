@@ -17,11 +17,9 @@ Clamped header and subheader font sizes
 
 Add checkmark-type image to the reservation confirmation card
 
-Gradient colors on reservation form? Feedback if the user tries to click the submit button without all the required information filled out?
-
 button to link back to the homepage from the reservation confirmation screen
 
-Add a cart component & context, and allow the user to add the specials on the homepage to it. Add SweetAlert2 for pop-ups that handle the adding process. 
+Make a component to display the cart state & convert is from a useState to a context. Show the cumulative price of all orders, and give the user the ability to simulate submitting an order. Added a cart notification number as a before/after css attribute in the navbar.
 
 Improve aesthetics
 

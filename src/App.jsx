@@ -8,6 +8,7 @@ import { Routes, Route } from 'react-router-dom'
 import About from './components/About'
 import Testimonials from './components/Testimonials'
 import Specials from './components/Specials'
+import Cart from './components/Cart'
 
 function App() {
 
@@ -17,7 +18,8 @@ function App() {
       <Routes>
         <Route index element={<Homepage />} />
         <Route path='/about' element={<><About /><Testimonials /></>} />
-        {['menu', 'orders', 'specials'].map((path, index) => <Route key={index} path={path} element={<Specials />} />)}
+        {['menu', 'specials'].map((path, index) => <Route key={index} path={path} element={<Specials />} />)}
+        <Route path='/orders' element={<><Cart /><Specials /></>} />
         <Route path='/reservation' element={<Booking />} />
         <Route path='/confirmation' element={<Confirmation />} />
       </Routes>

@@ -19,7 +19,11 @@ Add checkmark-type image to the reservation confirmation card
 
 button to link back to the homepage from the reservation confirmation screen
 
-Make a component to display the cart context. Show the cumulative price of all orders, and give the user the ability to simulate submitting an order. Added a cart notification number as a before/after css attribute in the navbar.
+Add functionality to remove items from the cart, add checkout button
+
+Make a simulated checkout page and form?
+
+Implement persistent (across routing / session / refreshes) cart data
 
 Improve aesthetics
 

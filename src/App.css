@@ -141,6 +141,22 @@ header, nav {
   text-decoration: underline;
 }
 
+#nav__orders {
+  position: relative;
+}
+
+#nav__orders::before {
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  content: attr(value);
+  font-size: 1rem;
+  color: white;
+  background-color: #495E57;
+  border-radius: 1rem;
+}
+
 /* Nav toggle and hamburger */
 
 .nav-toggle {

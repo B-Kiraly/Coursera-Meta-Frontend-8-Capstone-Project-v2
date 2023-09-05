@@ -1,8 +1,11 @@
 import Header from "../subcomponents/Header"
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { useCart } from "../providers/CartContext";
 
 export default function Navbar() {
+
+    const {cart} = useCart()
 
     const {pathname} = useLocation()
 
@@ -43,7 +46,11 @@ export default function Navbar() {
                     <ul className='nav__list'>
                         {navLinks.slice(0, Math.round(navLinks.length / 2)).map(link => {
                             return (
-                                <li className='nav__item' key={link.path} style={pathname === link.path? {backgroundColor: "yellow", outline: "3px solid #495E57"} : {}}>
+                                <li 
+                                className='nav__item' 
+                                key={link.path} 
+                                style={pathname === link.path? {backgroundColor: "yellow", outline: "3px solid #495E57"} : {}}
+                                >
                                     <a href={link.path} className='nav__link'>
                                         {link.text}
                                     </a>
@@ -54,7 +61,13 @@ export default function Navbar() {
                     <ul className="nav__list">
                         {navLinks.slice(Math.round(navLinks.length / 2)).map(link => {
                             return (
-                                <li className='nav__item' key={link.path} style={pathname === link.path? {backgroundColor: "yellow", outline: "3px solid #495E57"} : {}}>
+                                <li 
+                                id={link.path === "/orders" && cart.length > 0? "nav__orders" : ""}
+                                className='nav__item' 
+                                key={link.path} 
+                                style={pathname === link.path? {backgroundColor: "yellow", outline: "3px solid #495E57"} : {}}
+                                value={cart.length}
+                                >
                                     <a href={link.path} className='nav__link'>
                                         {link.text}
                                     </a>

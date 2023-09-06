@@ -10,15 +10,23 @@ export default function Cart() {
     useEffect(() => {
         setSubtotal(0)
         cart.forEach(itemObj => {
-            setSubtotal(prevTotal => prevTotal + (itemObj.dish.price * itemObj.quantity))
+            setSubtotal(prevTotal => {
+                let newTotal = parseFloat(prevTotal) + parseFloat((itemObj.dish.price * itemObj.quantity))
+                return newTotal.toFixed(2)
+            }
+            )
         })
     }, [cart])
+
+    useEffect(() => {
+        sessionStorage.setItem("cart", JSON.stringify(cart))
+      }, [cart])
 
     return (
         <section className="cart">
             <div className="container cart__container">
                 <ul className="cart__list">
-                    {cart.map(itemObj => {
+                    {cart.map((itemObj) => {
                         return (
                             <li 
                             key={itemObj.dish.id}
@@ -29,7 +37,14 @@ export default function Cart() {
                                 <p className="cart__item__price">${(itemObj.dish.price * itemObj.quantity).toFixed(2)}</p>
                                 <button 
                                 className="cart__item__delete"
-                                >X
+                                onClick={() => {            
+                                    setCart(current => current.filter(orderObj => {
+                                        console.log(orderObj.dish.name)
+                                        return orderObj.dish.name !== itemObj.dish.name
+                                    }))
+                                }}
+                                >
+                                    X
                                 </button>
                             </li>
                         )
@@ -38,7 +53,11 @@ export default function Cart() {
                 {cart.length === 0? 
                 <p className="cart__item__title">Your cart is current empty</p> 
                 : 
-                <p className="cart__item__title cart__item__subtotal">Subtotal: {subtotal}</p>
+                <>
+                    <p className="cart__item__title cart__item__subtotal">Subtotal: {subtotal}</p>
+                    <button className="button--standard cart__button">Proceed to Checkout</button>
+                </>
+
                 }
             </div>
 

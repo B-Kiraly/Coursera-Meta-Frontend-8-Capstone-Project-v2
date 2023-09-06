@@ -19,17 +19,9 @@ Add checkmark-type image to the reservation confirmation card
 
 button to link back to the homepage from the reservation confirmation screen
 
-Add functionality to remove items from the cart, add checkout button
-
-Make a simulated checkout page and form?
-
-Implement persistent (across routing / session / refreshes) cart data
+Make a simulated checkout page and form? Sweetalert pop-up with a timer, ending in a redirect back to the homepage? 
 
 Improve aesthetics
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 

@@ -273,7 +273,7 @@ header, nav {
 /* Specials */
 
 .specials {
-  padding: 8rem 0;
+  padding: 7rem 0;
 }
 
 .specials__flex {
@@ -540,10 +540,10 @@ header, nav {
   content: "Delete an order of this item";
   font-size: 1rem;
   white-space: nowrap;
-  color: darkgray;
+  color: rgb(128, 128, 128);
   position: absolute;
-  top: -1rem;
-  left: -3rem;
+  top: -1.3rem;
+  left: -8.5rem;
 }
 
 .cart__item__subtotal {
@@ -551,6 +551,11 @@ header, nav {
   padding: 1rem;
   outline: 1px solid var(--primary-green);
   text-align: right;
+}
+
+.cart__button {
+  margin-top: 1rem;
+  align-self: center;
 }
 
 /* Footer */
@@ -834,6 +839,7 @@ form > h1 {
   .cart__list {
     flex-direction: row;
     overflow-x: scroll;
+    justify-content: center;
   }
 
   .cart__container {
@@ -842,6 +848,7 @@ form > h1 {
 
   .cart__item {
     flex-direction: column;
+    align-items: center;
   }
 
   .cart__item__price, .cart__item__title {
@@ -855,6 +862,10 @@ form > h1 {
     max-width: unset;
     width: 7rem;
     height: 5.5rem;
+  }
+
+  .cart__item__delete:hover::before {
+    left: -4.4rem
   }
 
 }

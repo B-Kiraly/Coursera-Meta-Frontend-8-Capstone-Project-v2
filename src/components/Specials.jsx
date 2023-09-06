@@ -1,11 +1,15 @@
 import Swal from 'sweetalert2'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { specialsData } from '../utils/menuData';
 import { useCart } from '../providers/CartContext';
 
 export default function Specials() {
 
   const {cart, setCart} = useCart()
+
+  useEffect(() => {
+    sessionStorage.setItem("cart", JSON.stringify(cart))
+  }, [cart])
 
   const [specialsMenu, setSpecialsMenu] = useState(specialsData)
 
@@ -60,7 +64,7 @@ export default function Specials() {
             }])
             console.log("New cart item added")
           }
-        }
+          }
       })
   }
 
@@ -73,14 +77,6 @@ export default function Specials() {
                 </h1>
                 <button 
                 className="button--standard specials__button"
-                onClick={() => setSpecialsMenu(specialsMenu.map(dish => {
-                  if (dish.id === 2) {
-                    return {...dish, dish: "Barry Bergman"}
-                  }
-                  else {
-                    return dish
-                  }
-                }))}
                 >
                   Online Menu
                 </button>

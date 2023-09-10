@@ -11,7 +11,7 @@ export default function Specials() {
     sessionStorage.setItem("cart", JSON.stringify(cart))
   }, [cart])
 
-  const [specialsMenu, setSpecialsMenu] = useState(specialsData)
+  const [specialsMenu] = useState(specialsData)
 
   const handleOrder = (dish, index) => {
     console.log(`Menu array id ${index} has been clicked`);
@@ -32,7 +32,7 @@ export default function Specials() {
         showCancelButton: true,
         confirmButtonColor: '#638f2b',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, Order it!'
+        confirmButtonText: 'Confirm'
       }).then((result) => {
         if (result.isConfirmed) {
           Swal.fire(

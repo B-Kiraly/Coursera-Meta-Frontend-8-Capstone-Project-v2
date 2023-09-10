@@ -17,11 +17,9 @@ Clamped header and subheader font sizes
 
 Add checkmark-type image to the reservation confirmation card
 
-button to link back to the homepage from the reservation confirmation screen
+button to link back to the homepage from the reservation confirmation screen?
 
 Make a simulated checkout page and form? Sweetalert pop-up with a timer, ending in a redirect back to the homepage? 
-
-Improve aesthetics
 
 ## Available Scripts
 

@@ -9,6 +9,7 @@ import About from './components/About'
 import Testimonials from './components/Testimonials'
 import Specials from './components/Specials'
 import Cart from './components/Cart'
+import NotFound from './components/NotFound'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Route path='/orders' element={<><Cart /><Specials /></>} />
         <Route path='/reservation' element={<Booking />} />
         <Route path='/confirmation' element={<Confirmation />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </>

@@ -31,7 +31,7 @@ body {
 }
 
 .section-header {
-  font-size: 4rem;
+  font-size: clamp(3rem, 10vw, 4rem);
   font-weight: 600;
 }
 
@@ -273,7 +273,7 @@ header, nav {
 /* Specials */
 
 .specials {
-  padding: 7rem 0;
+  padding: 6rem 0;
 }
 
 .specials__flex {
@@ -685,6 +685,19 @@ form > h1 {
   font-weight: 700;
   font-style: normal;
   padding-left: 0.4rem;
+}
+
+.notfound__container {
+  padding: 3rem 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.notfound__image {
+  height: 10rem;
 }
 
 /* Media Query */

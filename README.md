@@ -13,11 +13,7 @@ The project is responsive and should look relatively good at any screen size. Ot
 
 ## todo
 
-Clamped header and subheader font sizes
-
-Add checkmark-type image to the reservation confirmation card
-
-button to link back to the homepage from the reservation confirmation screen?
+Better manage empty space in the cart display at smaller screen sizes. Everything aligns to the left currently, which leaves gaps on the right that don't look amazing. Need to find a way to center the cart items that doesn't mess with horizontal scrolling.
 
 Make a simulated checkout page and form? Sweetalert pop-up with a timer, ending in a redirect back to the homepage? 
 

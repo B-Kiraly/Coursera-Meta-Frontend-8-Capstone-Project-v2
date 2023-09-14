@@ -858,10 +858,9 @@ form > h1 {
     display: block;
     overflow-x: auto;
     white-space: nowrap;
-    justify-content: center;
     padding-bottom: 2rem;
+    text-align: justify;
   }
-
 
   .cart__item {
     display: inline-flex;

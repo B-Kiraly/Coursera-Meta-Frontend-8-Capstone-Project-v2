@@ -32,14 +32,21 @@ export default function Cart() {
                             key={itemObj.dish.id}
                             className="cart__item"
                             >
-                                <img className="cart__item__image" src={itemObj.dish.imageSrc} alt={itemObj.dish.name} />
-                                <p className="cart__item__title">{itemObj.dish.name} x{itemObj.quantity}</p>
-                                <p className="cart__item__price">${(itemObj.dish.price * itemObj.quantity).toFixed(2)}</p>
+                                <img 
+                                className="cart__item__image" 
+                                src={itemObj.dish.imageSrc} 
+                                alt={itemObj.dish.name} 
+                                />
+                                <p className="cart__item__title">
+                                    {itemObj.dish.name} x{itemObj.quantity}
+                                </p>
+                                <p className="cart__item__price">
+                                    ${(itemObj.dish.price * itemObj.quantity).toFixed(2)}
+                                </p>
                                 <button 
                                 className="cart__item__delete"
                                 onClick={() => {            
                                     setCart(current => current.filter(orderObj => {
-                                        console.log(orderObj.dish.name)
                                         return orderObj.dish.name !== itemObj.dish.name
                                     }))
                                 }}

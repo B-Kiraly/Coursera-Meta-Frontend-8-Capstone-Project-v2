@@ -849,17 +849,22 @@ form > h1 {
     z-index: 1;
   }
 
-  .cart__list {
-    flex-direction: row;
-    overflow-x: scroll;
-    justify-content: center;
+  .cart__container {
+    gap: 2rem 0rem;
+    padding-top: 1.5rem;
   }
 
-  .cart__container {
-    gap: 1rem;
+  .cart__list {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: center;
+    padding-bottom: 2rem;
   }
+
 
   .cart__item {
+    display: inline-flex;
     flex-direction: column;
     align-items: center;
   }
@@ -903,10 +908,6 @@ form > h1 {
     gap: 0.8rem;
     padding: 1.3rem 0rem;
   }
-
-  /* .nav__list {
-    flex-direction: column;
-  } */
 
   .footer__column {
     justify-content: center;

@@ -36,10 +36,6 @@ export default function Navbar() {
                     <span className="hamburger"></span>
                 </button>
                 <nav
-                onClick={() => {
-                    console.log(navLinks.slice(0, Math.round(navLinks.length / 2)))
-                    console.log(navLinks.slice(Math.round(navLinks.length / 2)))
-                }}
                 className='nav'
                 style={windowWidth <= 600? displayNav? {display: "flex"}: {display: "none"}: {display: "flex"}}
                 >

@@ -6,9 +6,6 @@ export default function Confirmation() {
     const navigate = useNavigate()
     const {state} = useLocation()
 
-    console.log('welcome to the confirmation page, here is the location')
-    console.log(state)
-
     const reservationData = state
 
     useEffect(() => {

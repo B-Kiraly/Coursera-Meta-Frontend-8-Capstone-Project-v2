@@ -55,7 +55,6 @@ export default function BookingForm({availableTimes, timesDispatch, reservationD
             onChange={e => {
                 if (e.target.value) {
                     let dateObj = new Date(e.target.value)
-                    console.log(e.target.value)
                     setReservationData({
                         ...reservationData,
                         date: dateObj,

@@ -13,8 +13,7 @@ export default function Specials() {
 
   const [specialsMenu] = useState(specialsData)
 
-  const handleOrder = (dish, index) => {
-    console.log(`Menu array id ${index} has been clicked`);
+  const handleOrder = (dish) => {
 
     Swal.fire({
         title: `Add ${dish.name} to Cart?`,
@@ -44,7 +43,6 @@ export default function Specials() {
           cart.forEach(itemObj => {
             if (!isAlreadyInCart) {
               if (itemObj.dish.name === dish.name) {
-                console.log("Dish is already in array")
                 isAlreadyInCart = true
                 setCart(cart.map(itemObj => {
                   if (itemObj.dish.name === dish.name) {
@@ -62,7 +60,6 @@ export default function Specials() {
               dish: {...dish},
               quantity: parseInt(result.value)
             }])
-            console.log("New cart item added")
           }
           }
       })
@@ -72,7 +69,7 @@ export default function Specials() {
     <section className="specials">
         <div className="container specials__flex">
             <div className="specials__topbar">
-                <h1 className="section-header" onClick={() => console.log(cart)}>
+                <h1 className="section-header">
                     This Week's Specials!
                 </h1>
                 <button 

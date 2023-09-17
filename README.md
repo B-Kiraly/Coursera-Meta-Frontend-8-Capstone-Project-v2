@@ -13,7 +13,7 @@ The project is responsive and should look relatively good at any screen size. Ot
 
 ## todo
 
-Better manage empty space in the cart display at smaller screen sizes. Everything aligns to the left currently, which leaves gaps on the right that don't look amazing. Need to find a way to center the cart items that doesn't mess with horizontal scrolling.
+Better medium screen width layout for the columns in the footer. 
 
 Make a simulated checkout page and form? Sweetalert pop-up with a timer, ending in a redirect back to the homepage? 
 

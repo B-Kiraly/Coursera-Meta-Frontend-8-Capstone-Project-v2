@@ -58,7 +58,7 @@ export default function Cart() {
                     })}
                 </ul>
                 {cart.length === 0? 
-                <p className="cart__item__title">Your cart is current empty</p> 
+                <p className="cart__placeholder">Your cart is currently empty</p> 
                 : 
                 <>
                     <p className="cart__item__title cart__item__subtotal">Subtotal: {subtotal}</p>
